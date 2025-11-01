@@ -24,6 +24,6 @@
 package swagger
 
 type StatusListStatus struct {
-	Capacity string `json:"capacity,omitempty"`
-	Values []string `json:"values,omitempty"`
+	Capacity string   `json:"capacity,omitempty"`
+	Values   []string `json:"values,omitempty"`
 }

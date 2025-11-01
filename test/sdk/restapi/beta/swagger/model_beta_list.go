@@ -25,7 +25,7 @@ package swagger
 
 // A representation of a List.
 type BetaList struct {
-	Name string `json:"name,omitempty"`
-	Capacity string `json:"capacity,omitempty"`
-	Values []string `json:"values,omitempty"`
+	Name     string   `json:"name,omitempty"`
+	Capacity string   `json:"capacity,omitempty"`
+	Values   []string `json:"values,omitempty"`
 }

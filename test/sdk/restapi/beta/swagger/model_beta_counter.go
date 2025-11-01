@@ -25,7 +25,7 @@ package swagger
 
 // A representation of a Counter.
 type BetaCounter struct {
-	Name string `json:"name,omitempty"`
-	Count string `json:"count,omitempty"`
+	Name     string `json:"name,omitempty"`
+	Count    string `json:"count,omitempty"`
 	Capacity string `json:"capacity,omitempty"`
 }

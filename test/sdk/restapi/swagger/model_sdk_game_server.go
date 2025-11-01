@@ -26,6 +26,6 @@ package swagger
 // A GameServer Custom Resource Definition object We will only export those resources that make the most sense. Can always expand to more as needed.
 type SdkGameServer struct {
 	ObjectMeta *GameServerObjectMeta `json:"object_meta,omitempty"`
-	Spec *GameServerSpec `json:"spec,omitempty"`
-	Status *SdkGameServerStatus `json:"status,omitempty"`
+	Spec       *GameServerSpec       `json:"spec,omitempty"`
+	Status     *SdkGameServerStatus  `json:"status,omitempty"`
 }

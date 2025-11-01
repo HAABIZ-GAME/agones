@@ -24,7 +24,7 @@
 package swagger
 
 type StatusPlayerStatus struct {
-	Count string `json:"count,omitempty"`
-	Capacity string `json:"capacity,omitempty"`
-	Ids []string `json:"ids,omitempty"`
+	Count    string   `json:"count,omitempty"`
+	Capacity string   `json:"capacity,omitempty"`
+	Ids      []string `json:"ids,omitempty"`
 }

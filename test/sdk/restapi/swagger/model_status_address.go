@@ -24,6 +24,6 @@
 package swagger
 
 type StatusAddress struct {
-	Type_ string `json:"type,omitempty"`
+	Type_   string `json:"type,omitempty"`
 	Address string `json:"address,omitempty"`
 }

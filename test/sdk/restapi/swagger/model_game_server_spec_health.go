@@ -24,8 +24,8 @@
 package swagger
 
 type GameServerSpecHealth struct {
-	Disabled bool `json:"disabled,omitempty"`
-	PeriodSeconds int32 `json:"period_seconds,omitempty"`
-	FailureThreshold int32 `json:"failure_threshold,omitempty"`
+	Disabled            bool  `json:"disabled,omitempty"`
+	PeriodSeconds       int32 `json:"period_seconds,omitempty"`
+	FailureThreshold    int32 `json:"failure_threshold,omitempty"`
 	InitialDelaySeconds int32 `json:"initial_delay_seconds,omitempty"`
 }

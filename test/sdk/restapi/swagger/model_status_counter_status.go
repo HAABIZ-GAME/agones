@@ -24,6 +24,6 @@
 package swagger
 
 type StatusCounterStatus struct {
-	Count string `json:"count,omitempty"`
+	Count    string `json:"count,omitempty"`
 	Capacity string `json:"capacity,omitempty"`
 }

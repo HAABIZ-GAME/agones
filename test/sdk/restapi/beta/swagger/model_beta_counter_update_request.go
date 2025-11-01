@@ -25,8 +25,8 @@ package swagger
 
 // A representation of a Counter Update Request.
 type BetaCounterUpdateRequest struct {
-	Name string `json:"name,omitempty"`
-	Count string `json:"count,omitempty"`
-	Capacity string `json:"capacity,omitempty"`
+	Name      string `json:"name,omitempty"`
+	Count     string `json:"count,omitempty"`
+	Capacity  string `json:"capacity,omitempty"`
 	CountDiff string `json:"countDiff,omitempty"`
 }

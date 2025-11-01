@@ -24,13 +24,13 @@
 package swagger
 
 type GameServerObjectMeta struct {
-	Name string `json:"name,omitempty"`
-	Namespace string `json:"namespace,omitempty"`
-	Uid string `json:"uid,omitempty"`
-	ResourceVersion string `json:"resource_version,omitempty"`
-	Generation string `json:"generation,omitempty"`
-	CreationTimestamp string `json:"creation_timestamp,omitempty"`
-	DeletionTimestamp string `json:"deletion_timestamp,omitempty"`
-	Annotations map[string]string `json:"annotations,omitempty"`
-	Labels map[string]string `json:"labels,omitempty"`
+	Name              string            `json:"name,omitempty"`
+	Namespace         string            `json:"namespace,omitempty"`
+	Uid               string            `json:"uid,omitempty"`
+	ResourceVersion   string            `json:"resource_version,omitempty"`
+	Generation        string            `json:"generation,omitempty"`
+	CreationTimestamp string            `json:"creation_timestamp,omitempty"`
+	DeletionTimestamp string            `json:"deletion_timestamp,omitempty"`
+	Annotations       map[string]string `json:"annotations,omitempty"`
+	Labels            map[string]string `json:"labels,omitempty"`
 }

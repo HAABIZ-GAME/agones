@@ -25,5 +25,5 @@ package swagger
 
 type StatusPort struct {
 	Name string `json:"name,omitempty"`
-	Port int32 `json:"port,omitempty"`
+	Port int32  `json:"port,omitempty"`
 }
