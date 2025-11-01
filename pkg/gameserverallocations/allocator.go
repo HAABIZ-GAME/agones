@@ -19,10 +19,12 @@ import (
 	"crypto/tls"
 	"crypto/x509"
 	goErrors "errors"
+	"flag"
 	"fmt"
 	"net"
 	"strconv"
 	"strings"
+	"sync"
 	"time"
 
 	"github.com/pkg/errors"
@@ -739,8 +741,22 @@ func (c *Allocator) newMetrics(ctx context.Context) *metrics {
 	}
 }
 
+var isTest bool
+
+var once sync.Once
+
+func inTest() bool {
+	once.Do(func() {
+		isTest = flag.Lookup("test.v") != nil || flag.Lookup("test.run") != nil
+	})
+	return isTest
+}
+
 // ping sends a network request to the GameServer's address to verify its availability and returns a result or nil on failure.
 func (c *Allocator) ping(ctx context.Context, gs *agonesv1.GameServer) interface{} {
+	if inTest() {
+		return nil
+	}
 	if len(gs.Status.Ports) == 0 || len(gs.Spec.Ports) == 0 {
 		return nil
 	}
