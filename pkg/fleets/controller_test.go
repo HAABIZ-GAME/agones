@@ -22,16 +22,6 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/apis"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	v1 "agones.dev/agones/pkg/apis/agones/v1"
-	applyconfigurations "agones.dev/agones/pkg/client/applyconfiguration/agones/v1"
-	agonesv1clientset "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
-	agonesv1client "agones.dev/agones/pkg/client/listers/agones/v1"
-	"agones.dev/agones/pkg/cloudproduct/generic"
-	agtesting "agones.dev/agones/pkg/testing"
-	utilruntime "agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/webhooks"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -51,6 +41,17 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
+
+	"agones.dev/agones/pkg/apis"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	v1 "agones.dev/agones/pkg/apis/agones/v1"
+	applyconfigurations "agones.dev/agones/pkg/client/applyconfiguration/agones/v1"
+	agonesv1clientset "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
+	agonesv1client "agones.dev/agones/pkg/client/listers/agones/v1"
+	"agones.dev/agones/pkg/cloudproduct/generic"
+	agtesting "agones.dev/agones/pkg/testing"
+	utilruntime "agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/webhooks"
 )
 
 func TestControllerSyncFleet(t *testing.T) {

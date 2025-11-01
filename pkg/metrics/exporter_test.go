@@ -30,7 +30,6 @@ import (
 	"agones.dev/agones/pkg/util/httpserver"
 	"agones.dev/agones/test/e2e/framework"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/prometheus/client_golang/prometheus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -39,6 +38,8 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
 	k8stesting "k8s.io/client-go/testing"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 func TestRegisterPrometheusExporter(t *testing.T) {

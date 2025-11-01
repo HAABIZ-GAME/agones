@@ -25,13 +25,6 @@ import (
 	"testing"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	"agones.dev/agones/pkg/gameservers"
-	agtesting "agones.dev/agones/pkg/testing"
-	"agones.dev/agones/pkg/util/apiserver"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
@@ -46,6 +39,14 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
+
+	pb "agones.dev/agones/pkg/allocation/go"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	"agones.dev/agones/pkg/gameservers"
+	agtesting "agones.dev/agones/pkg/testing"
+	"agones.dev/agones/pkg/util/apiserver"
 )
 
 const (

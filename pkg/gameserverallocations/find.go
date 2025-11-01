@@ -17,11 +17,12 @@ package gameserverallocations
 import (
 	"math/rand"
 
+	"github.com/pkg/errors"
+
 	"agones.dev/agones/pkg/apis"
 	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
 	"agones.dev/agones/pkg/util/runtime"
-	"github.com/pkg/errors"
 )
 
 // findGameServerForAllocation finds an optimal gameserver, given the

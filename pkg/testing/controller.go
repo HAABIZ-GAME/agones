@@ -20,8 +20,6 @@ import (
 	gotesting "testing"
 	"time"
 
-	agonesfake "agones.dev/agones/pkg/client/clientset/versioned/fake"
-	"agones.dev/agones/pkg/client/informers/externalversions"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	apiextv1 "k8s.io/apiextensions-apiserver/pkg/apis/apiextensions/v1"
@@ -30,6 +28,9 @@ import (
 	kubefake "k8s.io/client-go/kubernetes/fake"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
+
+	agonesfake "agones.dev/agones/pkg/client/clientset/versioned/fake"
+	"agones.dev/agones/pkg/client/informers/externalversions"
 )
 
 // Handy tools for testing controllers

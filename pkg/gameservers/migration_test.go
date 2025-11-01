@@ -19,8 +19,6 @@ import (
 	"testing"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	agtesting "agones.dev/agones/pkg/testing"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -31,6 +29,9 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	agtesting "agones.dev/agones/pkg/testing"
 )
 
 func TestMigrationControllerSyncGameServer(t *testing.T) {

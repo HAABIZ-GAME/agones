@@ -19,10 +19,11 @@
 package fake
 
 import (
+	gentype "k8s.io/client-go/gentype"
+
 	v1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 	autoscalingv1 "agones.dev/agones/pkg/client/applyconfiguration/autoscaling/v1"
 	typedautoscalingv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/autoscaling/v1"
-	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeFleetAutoscalers implements FleetAutoscalerInterface

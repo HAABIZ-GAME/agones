@@ -23,15 +23,16 @@ import (
 	sync "sync"
 	time "time"
 
+	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+	runtime "k8s.io/apimachinery/pkg/runtime"
+	schema "k8s.io/apimachinery/pkg/runtime/schema"
+	cache "k8s.io/client-go/tools/cache"
+
 	versioned "agones.dev/agones/pkg/client/clientset/versioned"
 	agones "agones.dev/agones/pkg/client/informers/externalversions/agones"
 	autoscaling "agones.dev/agones/pkg/client/informers/externalversions/autoscaling"
 	internalinterfaces "agones.dev/agones/pkg/client/informers/externalversions/internalinterfaces"
 	multicluster "agones.dev/agones/pkg/client/informers/externalversions/multicluster"
-	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
-	runtime "k8s.io/apimachinery/pkg/runtime"
-	schema "k8s.io/apimachinery/pkg/runtime/schema"
-	cache "k8s.io/client-go/tools/cache"
 )
 
 // SharedInformerOption defines the functional option type for SharedInformerFactory.

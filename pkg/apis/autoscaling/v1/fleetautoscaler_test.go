@@ -18,11 +18,12 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/stretchr/testify/assert"
 	admregv1 "k8s.io/api/admissionregistration/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/intstr"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 func TestFleetAutoscalerValidateUpdate(t *testing.T) {

@@ -18,9 +18,10 @@ import (
 	"os"
 	"testing"
 
-	e2eframework "agones.dev/agones/test/e2e/framework"
 	"github.com/sirupsen/logrus"
 	log "github.com/sirupsen/logrus"
+
+	e2eframework "agones.dev/agones/test/e2e/framework"
 )
 
 const defaultNs = "default"

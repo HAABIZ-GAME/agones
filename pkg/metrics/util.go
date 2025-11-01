@@ -21,10 +21,11 @@ import (
 	"strings"
 	"unicode/utf8"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"contrib.go.opencensus.io/exporter/stackdriver"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/tag"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

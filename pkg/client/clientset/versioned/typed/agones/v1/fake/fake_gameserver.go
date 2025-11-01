@@ -19,10 +19,11 @@
 package fake
 
 import (
+	gentype "k8s.io/client-go/gentype"
+
 	v1 "agones.dev/agones/pkg/apis/agones/v1"
 	agonesv1 "agones.dev/agones/pkg/client/applyconfiguration/agones/v1"
 	typedagonesv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
-	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeGameServers implements GameServerInterface

@@ -22,14 +22,6 @@ import (
 	"sync"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	"agones.dev/agones/pkg/client/clientset/versioned"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	autoscalinglisterv1 "agones.dev/agones/pkg/client/listers/autoscaling/v1"
-	fleetsv1 "agones.dev/agones/pkg/fleets"
-	"agones.dev/agones/pkg/util/runtime"
 	lru "github.com/hashicorp/golang-lru"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -44,6 +36,15 @@ import (
 	"k8s.io/client-go/kubernetes"
 	v1 "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/tools/cache"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	"agones.dev/agones/pkg/client/clientset/versioned"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	autoscalinglisterv1 "agones.dev/agones/pkg/client/listers/autoscaling/v1"
+	fleetsv1 "agones.dev/agones/pkg/fleets"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

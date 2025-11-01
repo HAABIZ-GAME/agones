@@ -22,14 +22,6 @@ import (
 	"testing"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	gameserverv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	mt "agones.dev/agones/pkg/metrics"
-	agtesting "agones.dev/agones/pkg/testing"
-	"agones.dev/agones/pkg/util/httpserver"
-	"agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/test/e2e/framework"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"go.opencensus.io/stats/view"
@@ -39,6 +31,15 @@ import (
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	gameserverv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	mt "agones.dev/agones/pkg/metrics"
+	agtesting "agones.dev/agones/pkg/testing"
+	"agones.dev/agones/pkg/util/httpserver"
+	"agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/test/e2e/framework"
 )
 
 type mockGameServerLister struct {

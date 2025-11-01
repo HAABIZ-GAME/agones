@@ -17,8 +17,9 @@ package gameserversets
 import (
 	"sync"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )
 
 // gameServerSetCacheEntry manages a list of items created and deleted locally for a single game server set.

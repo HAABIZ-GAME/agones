@@ -17,18 +17,19 @@ package cloudproduct
 import (
 	"context"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	"agones.dev/agones/pkg/cloudproduct/generic"
-	"agones.dev/agones/pkg/cloudproduct/gke"
-	"agones.dev/agones/pkg/portallocator"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	"agones.dev/agones/pkg/cloudproduct/generic"
+	"agones.dev/agones/pkg/cloudproduct/gke"
+	"agones.dev/agones/pkg/portallocator"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // The Cloud Product abstraction currently consists of disjoint interfaces:

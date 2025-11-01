@@ -19,10 +19,11 @@
 package v1
 
 import (
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"
+
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 )
 
 // GameServerAllocationPolicyLister helps list GameServerAllocationPolicies.

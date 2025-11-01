@@ -19,8 +19,9 @@
 package v1
 
 import (
-	apis "agones.dev/agones/pkg/apis"
 	corev1 "k8s.io/api/core/v1"
+
+	apis "agones.dev/agones/pkg/apis"
 )
 
 // GameServerSpecApplyConfiguration represents a declarative configuration of the GameServerSpec type for use

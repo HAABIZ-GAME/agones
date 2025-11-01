@@ -19,8 +19,9 @@
 package v1
 
 import (
-	apis "agones.dev/agones/pkg/apis"
 	appsv1 "k8s.io/api/apps/v1"
+
+	apis "agones.dev/agones/pkg/apis"
 )
 
 // FleetSpecApplyConfiguration represents a declarative configuration of the FleetSpec type for use

@@ -21,11 +21,6 @@ import (
 	"slices"
 	"strings"
 
-	"agones.dev/agones/pkg"
-	"agones.dev/agones/pkg/apis"
-	"agones.dev/agones/pkg/apis/agones"
-	"agones.dev/agones/pkg/util/apiserver"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"gomodules.xyz/jsonpatch/v2"
 	corev1 "k8s.io/api/core/v1"
@@ -34,6 +29,12 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/validation/field"
+
+	"agones.dev/agones/pkg"
+	"agones.dev/agones/pkg/apis"
+	"agones.dev/agones/pkg/apis/agones"
+	"agones.dev/agones/pkg/util/apiserver"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // GameServerState is the state for the GameServer

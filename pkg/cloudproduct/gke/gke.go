@@ -20,12 +20,6 @@ import (
 	"encoding/json"
 	"fmt"
 
-	"agones.dev/agones/pkg/apis"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	"agones.dev/agones/pkg/cloudproduct/eviction"
-	"agones.dev/agones/pkg/portallocator"
-	"agones.dev/agones/pkg/util/runtime"
 	"cloud.google.com/go/compute/metadata"
 	"github.com/pkg/errors"
 	corev1 "k8s.io/api/core/v1"
@@ -33,6 +27,13 @@ import (
 	"k8s.io/apimachinery/pkg/util/validation/field"
 	"k8s.io/client-go/informers"
 	"k8s.io/client-go/kubernetes"
+
+	"agones.dev/agones/pkg/apis"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	"agones.dev/agones/pkg/cloudproduct/eviction"
+	"agones.dev/agones/pkg/portallocator"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

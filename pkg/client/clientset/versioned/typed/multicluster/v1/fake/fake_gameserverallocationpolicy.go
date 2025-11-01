@@ -19,10 +19,11 @@
 package fake
 
 import (
+	gentype "k8s.io/client-go/gentype"
+
 	v1 "agones.dev/agones/pkg/apis/multicluster/v1"
 	multiclusterv1 "agones.dev/agones/pkg/client/applyconfiguration/multicluster/v1"
 	typedmulticlusterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1"
-	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeGameServerAllocationPolicies implements GameServerAllocationPolicyInterface

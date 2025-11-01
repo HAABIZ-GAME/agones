@@ -18,12 +18,13 @@ import (
 	"context"
 	"testing"
 
-	e2eframework "agones.dev/agones/test/e2e/framework"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/api/resource"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	e2eframework "agones.dev/agones/test/e2e/framework"
 
 	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )

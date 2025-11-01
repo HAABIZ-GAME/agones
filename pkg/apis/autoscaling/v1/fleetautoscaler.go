@@ -22,8 +22,6 @@ import (
 	"strings"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/robfig/cron/v3"
 	admregv1 "k8s.io/api/admissionregistration/v1"
 	apimachineryvalidation "k8s.io/apimachinery/pkg/api/validation"
@@ -31,6 +29,9 @@ import (
 	"k8s.io/apimachinery/pkg/types"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	"k8s.io/apimachinery/pkg/util/validation/field"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // +genclient

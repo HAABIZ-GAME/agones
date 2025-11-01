@@ -21,10 +21,11 @@ import (
 	"sync"
 	"time"
 
-	"agones.dev/agones/pkg/util/fswatch"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+
+	"agones.dev/agones/pkg/util/fswatch"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

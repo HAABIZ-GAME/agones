@@ -19,9 +19,10 @@
 package fake
 
 import (
-	v1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
+
+	v1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
 )
 
 type FakeAgonesV1 struct {

@@ -19,10 +19,11 @@
 package v1
 
 import (
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 	labels "k8s.io/apimachinery/pkg/labels"
 	listers "k8s.io/client-go/listers"
 	cache "k8s.io/client-go/tools/cache"
+
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 )
 
 // FleetAutoscalerLister helps list FleetAutoscalers.

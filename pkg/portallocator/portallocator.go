@@ -19,10 +19,6 @@ import (
 	"sort"
 	"sync"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	corev1 "k8s.io/api/core/v1"
@@ -31,6 +27,11 @@ import (
 	"k8s.io/client-go/informers"
 	corelisterv1 "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/tools/cache"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // Interface manages the dynamic port allocation strategy.

@@ -17,11 +17,12 @@
 package fleets
 
 import (
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
 	"github.com/pkg/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
 )
 
 // ListGameServerSetsByFleetOwner lists all the GameServerSets for a given

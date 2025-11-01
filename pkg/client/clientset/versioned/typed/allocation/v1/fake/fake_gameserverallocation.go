@@ -19,9 +19,10 @@
 package fake
 
 import (
+	gentype "k8s.io/client-go/gentype"
+
 	v1 "agones.dev/agones/pkg/apis/allocation/v1"
 	allocationv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/allocation/v1"
-	gentype "k8s.io/client-go/gentype"
 )
 
 // fakeGameServerAllocations implements GameServerAllocationInterface

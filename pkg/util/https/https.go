@@ -19,9 +19,10 @@ import (
 	"io"
 	"net/http"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // ErrorHandlerFunc is a http handler that can return an error

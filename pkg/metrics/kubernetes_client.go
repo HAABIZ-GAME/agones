@@ -19,13 +19,14 @@ import (
 	"net/url"
 	"time"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/metrics"
 	"k8s.io/client-go/util/workqueue"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

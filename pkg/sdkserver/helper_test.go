@@ -21,12 +21,13 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/sdk"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	netcontext "golang.org/x/net/context"
 	"google.golang.org/grpc/metadata"
 	"k8s.io/apimachinery/pkg/util/wait"
+
+	"agones.dev/agones/pkg/sdk"
 )
 
 func testHTTPHealth(t *testing.T, url string, expectedResponse string, expectedStatus int) {

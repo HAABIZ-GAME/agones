@@ -29,10 +29,6 @@ import (
 	"testing"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	e2e "agones.dev/agones/test/e2e/framework"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -44,6 +40,11 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/wait"
+
+	pb "agones.dev/agones/pkg/allocation/go"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	e2e "agones.dev/agones/test/e2e/framework"
 )
 
 const (

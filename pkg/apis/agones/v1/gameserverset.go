@@ -15,12 +15,13 @@
 package v1
 
 import (
-	"agones.dev/agones/pkg/apis"
-	"agones.dev/agones/pkg/apis/agones"
-	"agones.dev/agones/pkg/util/runtime"
 	apiequality "k8s.io/apimachinery/pkg/api/equality"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/validation/field"
+
+	"agones.dev/agones/pkg/apis"
+	"agones.dev/agones/pkg/apis/agones"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

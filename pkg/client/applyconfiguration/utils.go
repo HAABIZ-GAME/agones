@@ -19,6 +19,10 @@
 package applyconfiguration
 
 import (
+	runtime "k8s.io/apimachinery/pkg/runtime"
+	schema "k8s.io/apimachinery/pkg/runtime/schema"
+	testing "k8s.io/client-go/testing"
+
 	v1 "agones.dev/agones/pkg/apis/agones/v1"
 	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
@@ -26,9 +30,6 @@ import (
 	applyconfigurationautoscalingv1 "agones.dev/agones/pkg/client/applyconfiguration/autoscaling/v1"
 	internal "agones.dev/agones/pkg/client/applyconfiguration/internal"
 	applyconfigurationmulticlusterv1 "agones.dev/agones/pkg/client/applyconfiguration/multicluster/v1"
-	runtime "k8s.io/apimachinery/pkg/runtime"
-	schema "k8s.io/apimachinery/pkg/runtime/schema"
-	testing "k8s.io/client-go/testing"
 )
 
 // ForKind returns an apply configuration type for the given GroupVersionKind, or nil if no

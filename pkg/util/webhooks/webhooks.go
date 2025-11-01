@@ -19,12 +19,13 @@ import (
 	"encoding/json"
 	"net/http"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	admissionv1 "k8s.io/api/admission/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime/schema"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // WebHook manage Kubernetes webhooks

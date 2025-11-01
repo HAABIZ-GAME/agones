@@ -20,7 +20,6 @@ import (
 	"os"
 	"time"
 
-	"agones.dev/agones/pkg/util/httpserver"
 	"cloud.google.com/go/compute/metadata"
 	"contrib.go.opencensus.io/exporter/prometheus"
 	"contrib.go.opencensus.io/exporter/stackdriver"
@@ -30,6 +29,8 @@ import (
 	"github.com/prometheus/client_golang/prometheus/collectors"
 	"go.opencensus.io/stats/view"
 	"google.golang.org/genproto/googleapis/api/monitoredres"
+
+	"agones.dev/agones/pkg/util/httpserver"
 )
 
 // Config holds configuration for metrics reporting

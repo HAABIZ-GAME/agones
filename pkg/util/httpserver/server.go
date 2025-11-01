@@ -20,9 +20,10 @@ import (
 	"context"
 	"net/http"
 
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
+
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 // Server is a HTTPs server that conforms to the runner interface

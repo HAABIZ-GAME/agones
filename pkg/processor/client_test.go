@@ -20,10 +20,11 @@ import (
 	"testing"
 	"time"
 
-	allocationpb "agones.dev/agones/pkg/allocation/go"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/genproto/googleapis/rpc/status"
 	"google.golang.org/grpc/metadata"
+
+	allocationpb "agones.dev/agones/pkg/allocation/go"
 )
 
 // Mock for Processor_StreamBatchesClient

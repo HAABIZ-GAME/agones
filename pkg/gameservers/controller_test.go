@@ -24,13 +24,6 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/apis/agones"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/cloudproduct/generic"
-	"agones.dev/agones/pkg/portallocator"
-	agtesting "agones.dev/agones/pkg/testing"
-	agruntime "agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/webhooks"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
@@ -49,6 +42,14 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
+
+	"agones.dev/agones/pkg/apis/agones"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/cloudproduct/generic"
+	"agones.dev/agones/pkg/portallocator"
+	agtesting "agones.dev/agones/pkg/testing"
+	agruntime "agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/webhooks"
 )
 
 const (

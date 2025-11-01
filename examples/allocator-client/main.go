@@ -22,10 +22,11 @@ import (
 	"fmt"
 	"os"
 
-	pb "agones.dev/agones/pkg/allocation/go"
 	"github.com/pkg/errors"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+
+	pb "agones.dev/agones/pkg/allocation/go"
 )
 
 func main() {

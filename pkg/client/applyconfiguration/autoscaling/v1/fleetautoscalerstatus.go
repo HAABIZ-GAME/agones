@@ -19,8 +19,9 @@
 package v1
 
 import (
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
 )
 
 // FleetAutoscalerStatusApplyConfiguration represents a declarative configuration of the FleetAutoscalerStatus type for use

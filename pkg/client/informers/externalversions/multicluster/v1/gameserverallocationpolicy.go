@@ -22,14 +22,15 @@ import (
 	context "context"
 	time "time"
 
-	apismulticlusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	versioned "agones.dev/agones/pkg/client/clientset/versioned"
-	internalinterfaces "agones.dev/agones/pkg/client/informers/externalversions/internalinterfaces"
-	multiclusterv1 "agones.dev/agones/pkg/client/listers/multicluster/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
+
+	apismulticlusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	versioned "agones.dev/agones/pkg/client/clientset/versioned"
+	internalinterfaces "agones.dev/agones/pkg/client/informers/externalversions/internalinterfaces"
+	multiclusterv1 "agones.dev/agones/pkg/client/listers/multicluster/v1"
 )
 
 // GameServerAllocationPolicyInformer provides access to a shared informer and lister for

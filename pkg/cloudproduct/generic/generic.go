@@ -16,14 +16,15 @@
 package generic
 
 import (
+	corev1 "k8s.io/api/core/v1"
+	"k8s.io/apimachinery/pkg/util/validation/field"
+	"k8s.io/client-go/informers"
+
 	"agones.dev/agones/pkg/apis"
 	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	"agones.dev/agones/pkg/client/informers/externalversions"
 	"agones.dev/agones/pkg/cloudproduct/eviction"
 	"agones.dev/agones/pkg/portallocator"
-	corev1 "k8s.io/api/core/v1"
-	"k8s.io/apimachinery/pkg/util/validation/field"
-	"k8s.io/client-go/informers"
 )
 
 // New returns a new generic cloud product

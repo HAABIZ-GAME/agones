@@ -21,9 +21,10 @@ package v1
 import (
 	http "net/http"
 
+	rest "k8s.io/client-go/rest"
+
 	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type MulticlusterV1Interface interface {

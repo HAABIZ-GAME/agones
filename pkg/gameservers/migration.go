@@ -18,15 +18,6 @@ import (
 	"context"
 	"strings"
 
-	"agones.dev/agones/pkg/apis/agones"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/client/clientset/versioned"
-	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	"agones.dev/agones/pkg/util/logfields"
-	"agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/workerqueue"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -41,6 +32,16 @@ import (
 	corelisterv1 "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
+
+	"agones.dev/agones/pkg/apis/agones"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/client/clientset/versioned"
+	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	"agones.dev/agones/pkg/util/logfields"
+	"agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/workerqueue"
 )
 
 // MigrationController watches for if a Pod is migrated/a maintenance

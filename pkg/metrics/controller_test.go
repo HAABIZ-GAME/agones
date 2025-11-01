@@ -20,9 +20,6 @@ import (
 	"testing"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	agtesting "agones.dev/agones/pkg/testing"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/google/go-cmp/cmp"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -36,6 +33,10 @@ import (
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/util/intstr"
 	k8stesting "k8s.io/client-go/testing"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	agtesting "agones.dev/agones/pkg/testing"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const defaultNs = "default"

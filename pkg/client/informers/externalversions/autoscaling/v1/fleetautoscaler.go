@@ -22,14 +22,15 @@ import (
 	context "context"
 	time "time"
 
-	apisautoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	versioned "agones.dev/agones/pkg/client/clientset/versioned"
-	internalinterfaces "agones.dev/agones/pkg/client/informers/externalversions/internalinterfaces"
-	autoscalingv1 "agones.dev/agones/pkg/client/listers/autoscaling/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	watch "k8s.io/apimachinery/pkg/watch"
 	cache "k8s.io/client-go/tools/cache"
+
+	apisautoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	versioned "agones.dev/agones/pkg/client/clientset/versioned"
+	internalinterfaces "agones.dev/agones/pkg/client/informers/externalversions/internalinterfaces"
+	autoscalingv1 "agones.dev/agones/pkg/client/listers/autoscaling/v1"
 )
 
 // FleetAutoscalerInformer provides access to a shared informer and lister for

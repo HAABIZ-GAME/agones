@@ -21,13 +21,14 @@ import (
 	"strconv"
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	agtesting "agones.dev/agones/pkg/testing"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/runtime"
 	k8stesting "k8s.io/client-go/testing"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	agtesting "agones.dev/agones/pkg/testing"
 )
 
 func TestListGameServerSetsByFleetOwner(t *testing.T) {

@@ -21,9 +21,10 @@ import (
 	"testing"
 	"time"
 
+	log "github.com/sirupsen/logrus"
+
 	helper "agones.dev/agones/test/e2e/allochelper"
 	e2eframework "agones.dev/agones/test/e2e/framework"
-	log "github.com/sirupsen/logrus"
 )
 
 var framework *e2eframework.Framework

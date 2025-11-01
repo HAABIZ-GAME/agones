@@ -19,13 +19,14 @@ import (
 	"fmt"
 	"time"
 
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	mt "agones.dev/agones/pkg/metrics"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/sirupsen/logrus"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
+
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	mt "agones.dev/agones/pkg/metrics"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

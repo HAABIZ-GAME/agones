@@ -27,7 +27,7 @@ func TestIncrementMinorVersion(t *testing.T) {
 		input    string
 		expected string
 	}{
-		{"Standard minor increment",`release_version = "1.52.0"`, `release_version = "1.53.0"`},
+		{"Standard minor increment", `release_version = "1.52.0"`, `release_version = "1.53.0"`},
 		{"Increment with existing patch", `release_version = "1.52.1"`, `release_version = "1.53.0"`},
 		{"Double digit minor", `release_version = "1.9.5"`, `release_version = "1.10.0"`},
 	}

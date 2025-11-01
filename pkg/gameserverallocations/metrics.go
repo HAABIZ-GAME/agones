@@ -19,16 +19,17 @@ import (
 	"strconv"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	mt "agones.dev/agones/pkg/metrics"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/sirupsen/logrus"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/stats/view"
 	"go.opencensus.io/tag"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	mt "agones.dev/agones/pkg/metrics"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

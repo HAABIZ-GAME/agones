@@ -15,10 +15,11 @@
 package sdkserver
 
 import (
+	"google.golang.org/protobuf/proto"
+
 	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	"agones.dev/agones/pkg/sdk"
 	"agones.dev/agones/pkg/util/runtime"
-	"google.golang.org/protobuf/proto"
 )
 
 const (

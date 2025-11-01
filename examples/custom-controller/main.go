@@ -21,12 +21,13 @@ import (
 	"fmt"
 	"os"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	"github.com/go-logr/logr"
 	"k8s.io/apimachinery/pkg/api/errors"
 	ctrl "sigs.k8s.io/controller-runtime"
 	"sigs.k8s.io/controller-runtime/pkg/client"
 	"sigs.k8s.io/controller-runtime/pkg/log/zap"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )
 
 // GameServerReconciler reconciles a GameServer object

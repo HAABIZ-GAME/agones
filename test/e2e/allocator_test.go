@@ -24,12 +24,6 @@ import (
 	"testing"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	"agones.dev/agones/pkg/util/runtime"
-	helper "agones.dev/agones/test/e2e/allochelper"
-	e2e "agones.dev/agones/test/e2e/framework"
 	"github.com/sirupsen/logrus"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
@@ -41,6 +35,13 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/uuid"
 	"k8s.io/apimachinery/pkg/util/wait"
+
+	pb "agones.dev/agones/pkg/allocation/go"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	"agones.dev/agones/pkg/util/runtime"
+	helper "agones.dev/agones/test/e2e/allochelper"
+	e2e "agones.dev/agones/test/e2e/framework"
 )
 
 const (

@@ -17,12 +17,13 @@ package sdkserver
 import (
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/sdk"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/stretchr/testify/assert"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/sdk"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 func TestConvert(t *testing.T) {

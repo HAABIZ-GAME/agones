@@ -21,14 +21,15 @@ import (
 	"strings"
 	"time"
 
-	"agones.dev/agones/pkg"
-	"agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/signals"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/spf13/pflag"
 	"github.com/spf13/viper"
 	"golang.org/x/time/rate"
+
+	"agones.dev/agones/pkg"
+	"agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/signals"
 )
 
 const (

@@ -15,9 +15,10 @@
 package v1
 
 import (
-	"agones.dev/agones/pkg/apis"
 	corev1 "k8s.io/api/core/v1"
 	"k8s.io/apimachinery/pkg/util/validation/field"
+
+	"agones.dev/agones/pkg/apis"
 )
 
 // fakeAPIHooks is a stubabble, fake implementation of APIHooks

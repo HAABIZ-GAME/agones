@@ -17,13 +17,14 @@ package gameservers
 import (
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	agtesting "agones.dev/agones/pkg/testing"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	agtesting "agones.dev/agones/pkg/testing"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 func TestIsGameServerPod(t *testing.T) {

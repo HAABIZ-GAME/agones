@@ -30,7 +30,6 @@ import (
 
 // traceExporter is an implementation of trace.Exporter that uploads spans to
 // Stackdriver.
-//
 type traceExporter struct {
 	o         Options
 	projectID string

@@ -24,13 +24,6 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/apis"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/cloudproduct/generic"
-	"agones.dev/agones/pkg/gameservers"
-	agtesting "agones.dev/agones/pkg/testing"
-	utilruntime "agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/webhooks"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
@@ -43,6 +36,14 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
+
+	"agones.dev/agones/pkg/apis"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/cloudproduct/generic"
+	"agones.dev/agones/pkg/gameservers"
+	agtesting "agones.dev/agones/pkg/testing"
+	utilruntime "agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/webhooks"
 )
 
 func gsWithState(st agonesv1.GameServerState) *agonesv1.GameServer {

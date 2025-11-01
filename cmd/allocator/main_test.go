@@ -22,8 +22,6 @@ import (
 	"os"
 	"testing"
 
-	pb "agones.dev/agones/pkg/allocation/go"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
 	"github.com/stretchr/testify/assert"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -31,6 +29,9 @@ import (
 	k8serror "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
+
+	pb "agones.dev/agones/pkg/allocation/go"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
 )
 
 func TestAllocateHandler(t *testing.T) {

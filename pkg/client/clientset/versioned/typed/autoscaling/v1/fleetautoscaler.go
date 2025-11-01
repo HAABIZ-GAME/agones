@@ -21,13 +21,14 @@ package v1
 import (
 	context "context"
 
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	applyconfigurationautoscalingv1 "agones.dev/agones/pkg/client/applyconfiguration/autoscaling/v1"
-	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	gentype "k8s.io/client-go/gentype"
+
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	applyconfigurationautoscalingv1 "agones.dev/agones/pkg/client/applyconfiguration/autoscaling/v1"
+	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 )
 
 // FleetAutoscalersGetter has a method to return a FleetAutoscalerInterface.

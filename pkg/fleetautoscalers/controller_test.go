@@ -24,12 +24,6 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg/apis"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	"agones.dev/agones/pkg/gameservers"
-	agtesting "agones.dev/agones/pkg/testing"
-	"agones.dev/agones/pkg/util/webhooks"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
 	"github.com/stretchr/testify/assert"
@@ -46,6 +40,13 @@ import (
 	"k8s.io/apimachinery/pkg/watch"
 	k8stesting "k8s.io/client-go/testing"
 	"k8s.io/client-go/tools/cache"
+
+	"agones.dev/agones/pkg/apis"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	"agones.dev/agones/pkg/gameservers"
+	agtesting "agones.dev/agones/pkg/testing"
+	"agones.dev/agones/pkg/util/webhooks"
 )
 
 var (

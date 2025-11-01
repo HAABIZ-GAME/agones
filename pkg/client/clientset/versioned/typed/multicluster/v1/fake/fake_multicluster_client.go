@@ -19,9 +19,10 @@
 package fake
 
 import (
-	v1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1"
 	rest "k8s.io/client-go/rest"
 	testing "k8s.io/client-go/testing"
+
+	v1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1"
 )
 
 type FakeMulticlusterV1 struct {

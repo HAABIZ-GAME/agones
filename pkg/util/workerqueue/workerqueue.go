@@ -23,14 +23,15 @@ import (
 	"sync"
 	"time"
 
-	"agones.dev/agones/pkg/util/logfields"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	k8serror "k8s.io/apimachinery/pkg/api/errors"
 	"k8s.io/apimachinery/pkg/util/wait"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/util/workqueue"
+
+	"agones.dev/agones/pkg/util/logfields"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

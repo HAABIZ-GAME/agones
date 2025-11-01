@@ -19,15 +19,16 @@ import (
 	"testing"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	helper "agones.dev/agones/test/e2e/allochelper"
-	e2e "agones.dev/agones/test/e2e/framework"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"google.golang.org/grpc/status"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/wait"
+
+	pb "agones.dev/agones/pkg/allocation/go"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	helper "agones.dev/agones/test/e2e/allochelper"
+	e2e "agones.dev/agones/test/e2e/framework"
 
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 )

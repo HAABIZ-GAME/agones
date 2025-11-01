@@ -21,12 +21,13 @@ import (
 	"testing"
 	"time"
 
-	e2eframework "agones.dev/agones/test/e2e/framework"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	k8serrors "k8s.io/apimachinery/pkg/api/errors"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
+
+	e2eframework "agones.dev/agones/test/e2e/framework"
 )
 
 var framework *e2eframework.Framework

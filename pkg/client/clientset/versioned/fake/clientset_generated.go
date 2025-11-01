@@ -19,6 +19,12 @@
 package fake
 
 import (
+	"k8s.io/apimachinery/pkg/runtime"
+	"k8s.io/apimachinery/pkg/watch"
+	"k8s.io/client-go/discovery"
+	fakediscovery "k8s.io/client-go/discovery/fake"
+	"k8s.io/client-go/testing"
+
 	applyconfiguration "agones.dev/agones/pkg/client/applyconfiguration"
 	clientset "agones.dev/agones/pkg/client/clientset/versioned"
 	agonesv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
@@ -29,11 +35,6 @@ import (
 	fakeautoscalingv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/autoscaling/v1/fake"
 	multiclusterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1"
 	fakemulticlusterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1/fake"
-	"k8s.io/apimachinery/pkg/runtime"
-	"k8s.io/apimachinery/pkg/watch"
-	"k8s.io/client-go/discovery"
-	fakediscovery "k8s.io/client-go/discovery/fake"
-	"k8s.io/client-go/testing"
 )
 
 // NewSimpleClientset returns a clientset that will respond with the provided objects.

@@ -21,10 +21,11 @@ package v1
 import (
 	context "context"
 
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	gentype "k8s.io/client-go/gentype"
+
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 )
 
 // GameServerAllocationsGetter has a method to return a GameServerAllocationInterface.

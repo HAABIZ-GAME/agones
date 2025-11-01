@@ -20,17 +20,6 @@ import (
 	"fmt"
 	"time"
 
-	"agones.dev/agones/pkg/apis/agones"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/client/clientset/versioned"
-	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
-	"agones.dev/agones/pkg/client/informers/externalversions"
-	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
-	"agones.dev/agones/pkg/util/crd"
-	"agones.dev/agones/pkg/util/logfields"
-	"agones.dev/agones/pkg/util/runtime"
-	"agones.dev/agones/pkg/util/webhooks"
-	"agones.dev/agones/pkg/util/workerqueue"
 	"github.com/google/go-cmp/cmp"
 	"github.com/heptiolabs/healthcheck"
 	"github.com/pkg/errors"
@@ -52,6 +41,18 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
 	"k8s.io/utils/integer"
+
+	"agones.dev/agones/pkg/apis/agones"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/client/clientset/versioned"
+	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
+	"agones.dev/agones/pkg/client/informers/externalversions"
+	listerv1 "agones.dev/agones/pkg/client/listers/agones/v1"
+	"agones.dev/agones/pkg/util/crd"
+	"agones.dev/agones/pkg/util/logfields"
+	"agones.dev/agones/pkg/util/runtime"
+	"agones.dev/agones/pkg/util/webhooks"
+	"agones.dev/agones/pkg/util/workerqueue"
 )
 
 // Extensions struct contains what is needed to bind webhook handlers

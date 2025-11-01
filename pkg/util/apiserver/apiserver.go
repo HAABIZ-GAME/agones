@@ -22,8 +22,6 @@ import (
 	"reflect"
 	"strings"
 
-	"agones.dev/agones/pkg/util/https"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/go-openapi/spec"
 	"github.com/munnerz/goautoneg"
 	"github.com/pkg/errors"
@@ -33,6 +31,9 @@ import (
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/kube-openapi/pkg/handler3"
+
+	"agones.dev/agones/pkg/util/https"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

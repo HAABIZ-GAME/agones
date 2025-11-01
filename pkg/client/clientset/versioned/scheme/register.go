@@ -19,15 +19,16 @@
 package scheme
 
 import (
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 	v1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	runtime "k8s.io/apimachinery/pkg/runtime"
 	schema "k8s.io/apimachinery/pkg/runtime/schema"
 	serializer "k8s.io/apimachinery/pkg/runtime/serializer"
 	utilruntime "k8s.io/apimachinery/pkg/util/runtime"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 )
 
 var Scheme = runtime.NewScheme()

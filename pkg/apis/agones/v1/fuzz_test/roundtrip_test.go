@@ -4,10 +4,6 @@ import (
 	"math/rand"
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/api/apitesting/fuzzer"
 	"k8s.io/apimachinery/pkg/api/apitesting/roundtrip"
@@ -15,6 +11,11 @@ import (
 	"k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/serializer"
 	"k8s.io/apimachinery/pkg/util/sets"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	autoscalingv1 "agones.dev/agones/pkg/apis/autoscaling/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
 )
 
 func TestRoundTripTypes(t *testing.T) {

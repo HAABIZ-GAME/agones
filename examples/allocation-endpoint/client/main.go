@@ -26,13 +26,14 @@ import (
 	"sync"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
 	"golang.org/x/oauth2"
 	"google.golang.org/api/idtoken"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
+
+	pb "agones.dev/agones/pkg/allocation/go"
 )
 
 const port = "443"

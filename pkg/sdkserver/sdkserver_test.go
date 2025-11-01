@@ -23,13 +23,6 @@ import (
 	"testing"
 	"time"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/gameserverallocations"
-	"agones.dev/agones/pkg/sdk"
-	"agones.dev/agones/pkg/sdk/alpha"
-	"agones.dev/agones/pkg/sdk/beta"
-	agtesting "agones.dev/agones/pkg/testing"
-	agruntime "agones.dev/agones/pkg/util/runtime"
 	jsonpatch "github.com/evanphx/json-patch"
 	"github.com/google/go-cmp/cmp"
 	"github.com/sirupsen/logrus"
@@ -45,6 +38,14 @@ import (
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/utils/clock"
 	testclocks "k8s.io/utils/clock/testing"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/gameserverallocations"
+	"agones.dev/agones/pkg/sdk"
+	"agones.dev/agones/pkg/sdk/alpha"
+	"agones.dev/agones/pkg/sdk/beta"
+	agtesting "agones.dev/agones/pkg/testing"
+	agruntime "agones.dev/agones/pkg/util/runtime"
 )
 
 // patchGameServer is a helper function for the AddReactor "patch" that creates and applies a patch

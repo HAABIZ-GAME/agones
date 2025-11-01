@@ -19,9 +19,10 @@
 package v1
 
 import (
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )
 
 // GameServerStatusApplyConfiguration represents a declarative configuration of the GameServerStatus type for use

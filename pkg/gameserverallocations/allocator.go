@@ -23,18 +23,6 @@ import (
 	"strings"
 	"time"
 
-	"agones.dev/agones/pkg/allocation/converters"
-	pb "agones.dev/agones/pkg/allocation/go"
-	"agones.dev/agones/pkg/apis"
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
-	multiclusterinformerv1 "agones.dev/agones/pkg/client/informers/externalversions/multicluster/v1"
-	multiclusterlisterv1 "agones.dev/agones/pkg/client/listers/multicluster/v1"
-	"agones.dev/agones/pkg/util/apiserver"
-	"agones.dev/agones/pkg/util/logfields"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"go.opencensus.io/tag"
@@ -57,6 +45,19 @@ import (
 	corev1lister "k8s.io/client-go/listers/core/v1"
 	"k8s.io/client-go/tools/cache"
 	"k8s.io/client-go/tools/record"
+
+	"agones.dev/agones/pkg/allocation/converters"
+	pb "agones.dev/agones/pkg/allocation/go"
+	"agones.dev/agones/pkg/apis"
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	allocationv1 "agones.dev/agones/pkg/apis/allocation/v1"
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	getterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
+	multiclusterinformerv1 "agones.dev/agones/pkg/client/informers/externalversions/multicluster/v1"
+	multiclusterlisterv1 "agones.dev/agones/pkg/client/listers/multicluster/v1"
+	"agones.dev/agones/pkg/util/apiserver"
+	"agones.dev/agones/pkg/util/logfields"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 var (

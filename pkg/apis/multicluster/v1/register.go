@@ -15,11 +15,12 @@
 package v1
 
 import (
-	"agones.dev/agones/pkg/apis/multicluster"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	k8sruntime "k8s.io/apimachinery/pkg/runtime"
 	"k8s.io/apimachinery/pkg/runtime/schema"
 	"k8s.io/client-go/kubernetes/scheme"
+
+	"agones.dev/agones/pkg/apis/multicluster"
 )
 
 // SchemeGroupVersion is group version used to register these objects

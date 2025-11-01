@@ -17,10 +17,11 @@ package main
 import (
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	"agones.dev/agones/pkg/portallocator"
 	"github.com/stretchr/testify/assert"
 	"k8s.io/apimachinery/pkg/api/resource"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	"agones.dev/agones/pkg/portallocator"
 )
 
 func TestControllerConfigValidation(t *testing.T) {

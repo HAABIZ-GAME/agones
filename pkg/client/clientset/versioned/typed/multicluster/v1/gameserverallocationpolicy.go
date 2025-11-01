@@ -21,13 +21,14 @@ package v1
 import (
 	context "context"
 
-	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
-	applyconfigurationmulticlusterv1 "agones.dev/agones/pkg/client/applyconfiguration/multicluster/v1"
-	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	gentype "k8s.io/client-go/gentype"
+
+	multiclusterv1 "agones.dev/agones/pkg/apis/multicluster/v1"
+	applyconfigurationmulticlusterv1 "agones.dev/agones/pkg/client/applyconfiguration/multicluster/v1"
+	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 )
 
 // GameServerAllocationPoliciesGetter has a method to return a GameServerAllocationPolicyInterface.

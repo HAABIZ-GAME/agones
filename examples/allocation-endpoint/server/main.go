@@ -27,7 +27,6 @@ import (
 	"sync"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
 	"github.com/pkg/errors"
 	log "github.com/sirupsen/logrus"
 	"go.opencensus.io/plugin/ocgrpc"
@@ -39,6 +38,8 @@ import (
 	"google.golang.org/grpc/keepalive"
 	"google.golang.org/grpc/metadata"
 	"google.golang.org/grpc/status"
+
+	pb "agones.dev/agones/pkg/allocation/go"
 )
 
 const (
@@ -271,7 +272,7 @@ func updateFailed(clusterName string, err error) {
 }
 
 func connectToAgonesCluster(ctx context.Context, clusterInfo *ClusterInfo) (*grpc.ClientConn, error) {
-	// nolint: staticcheck	
+	// nolint: staticcheck
 	conn, err := grpc.DialContext(ctx, fmt.Sprintf("%s:443", clusterInfo.Endpoint), grpc.WithTransportCredentials(cred))
 	if err != nil {
 		return nil, errors.Wrapf(err, "could not connect to %s with endpoint %s", clusterInfo.Name, clusterInfo.Endpoint)

@@ -20,10 +20,6 @@ import (
 	"testing"
 	"time"
 
-	"agones.dev/agones/pkg"
-	"agones.dev/agones/pkg/apis"
-	"agones.dev/agones/pkg/apis/agones"
-	"agones.dev/agones/pkg/util/runtime"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	corev1 "k8s.io/api/core/v1"
@@ -31,6 +27,11 @@ import (
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/util/validation"
 	"k8s.io/apimachinery/pkg/util/validation/field"
+
+	"agones.dev/agones/pkg"
+	"agones.dev/agones/pkg/apis"
+	"agones.dev/agones/pkg/apis/agones"
+	"agones.dev/agones/pkg/util/runtime"
 )
 
 const (

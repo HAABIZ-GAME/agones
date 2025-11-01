@@ -26,6 +26,7 @@ import (
 	"strings"
 	"sync/atomic"
 	"time"
+
 	// get /debug/pprof endpoints on a mux through SetupPPROF
 	"net/http/pprof"
 

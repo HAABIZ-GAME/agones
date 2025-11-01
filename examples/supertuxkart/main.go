@@ -25,8 +25,9 @@ import (
 	"strings"
 	"time"
 
-	sdk "agones.dev/agones/sdks/go"
 	"github.com/hpcloud/tail"
+
+	sdk "agones.dev/agones/sdks/go"
 )
 
 // logLocation is the path to the location of the SuperTuxKart log file

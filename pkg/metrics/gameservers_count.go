@@ -17,10 +17,11 @@ package metrics
 import (
 	"context"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	"go.opencensus.io/stats"
 	"go.opencensus.io/tag"
 	"k8s.io/apimachinery/pkg/util/errors"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )
 
 const defaultFleetTag = "none"

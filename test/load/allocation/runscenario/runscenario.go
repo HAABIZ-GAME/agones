@@ -30,9 +30,10 @@ import (
 	"sync/atomic"
 	"time"
 
-	pb "agones.dev/agones/pkg/allocation/go"
 	"google.golang.org/grpc"
 	"google.golang.org/grpc/credentials"
+
+	pb "agones.dev/agones/pkg/allocation/go"
 )
 
 type allocErrorCode string

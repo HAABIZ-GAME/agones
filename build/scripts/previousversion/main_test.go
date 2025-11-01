@@ -17,8 +17,8 @@ package main
 import (
 	"testing"
 
-	"github.com/pkg/errors"
 	semver "github.com/blang/semver/v4"
+	"github.com/pkg/errors"
 )
 
 // mockLister is a mock implementation of the gcsLister interface for testing.
@@ -33,11 +33,11 @@ func (m mockLister) List(prefix string) (string, error) {
 
 func TestGetPreviousVersion(t *testing.T) {
 	testCases := []struct {
-		name         string
-		version      string
-		mockLister   mockLister
-		expected     string
-		expectErr    bool
+		name       string
+		version    string
+		mockLister mockLister
+		expected   string
+		expectErr  bool
 	}{
 		{
 			name:    "Minor Release - gsutil success",
@@ -67,11 +67,11 @@ func TestGetPreviousVersion(t *testing.T) {
 			expectErr:  false,
 		},
 		{
-			name:      "Major Release - error",
-			version:   "2.0.0",
+			name:       "Major Release - error",
+			version:    "2.0.0",
 			mockLister: mockLister{},
-			expected:  "",
-			expectErr: true,
+			expected:   "",
+			expectErr:  true,
 		},
 	}
 
@@ -96,10 +96,10 @@ func TestGetPreviousVersion(t *testing.T) {
 
 func TestGetLatestVersionFromGsutil(t *testing.T) {
 	testCases := []struct {
-		name          string
-		gsutilOutput  string
-		major, minor  uint64
-		expected      semver.Version
+		name         string
+		gsutilOutput string
+		major, minor uint64
+		expected     semver.Version
 	}{
 		{
 			name:         "No versions found",

@@ -22,7 +22,7 @@ const (
 // UnmarshalTypedError provides unmarshaling errors API response errors
 // for both typed and untyped errors.
 type UnmarshalTypedError struct {
-	exceptions map[string]func(protocol.ResponseMetadata) error
+	exceptions      map[string]func(protocol.ResponseMetadata) error
 	queryExceptions map[string]func(protocol.ResponseMetadata, string) error
 }
 
@@ -30,7 +30,7 @@ type UnmarshalTypedError struct {
 // set of exception names to the error unmarshalers
 func NewUnmarshalTypedError(exceptions map[string]func(protocol.ResponseMetadata) error) *UnmarshalTypedError {
 	return &UnmarshalTypedError{
-		exceptions: exceptions,
+		exceptions:      exceptions,
 		queryExceptions: map[string]func(protocol.ResponseMetadata, string) error{},
 	}
 }

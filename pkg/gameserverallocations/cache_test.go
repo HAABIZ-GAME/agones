@@ -17,9 +17,10 @@ package gameserverallocations
 import (
 	"testing"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	"github.com/stretchr/testify/assert"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 )
 
 func TestGameServerCacheEntry(t *testing.T) {

@@ -22,13 +22,14 @@ import (
 	fmt "fmt"
 	http "net/http"
 
+	discovery "k8s.io/client-go/discovery"
+	rest "k8s.io/client-go/rest"
+	flowcontrol "k8s.io/client-go/util/flowcontrol"
+
 	agonesv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/agones/v1"
 	allocationv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/allocation/v1"
 	autoscalingv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/autoscaling/v1"
 	multiclusterv1 "agones.dev/agones/pkg/client/clientset/versioned/typed/multicluster/v1"
-	discovery "k8s.io/client-go/discovery"
-	rest "k8s.io/client-go/rest"
-	flowcontrol "k8s.io/client-go/util/flowcontrol"
 )
 
 type Interface interface {

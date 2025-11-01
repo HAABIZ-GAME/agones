@@ -19,13 +19,14 @@ import (
 	"testing"
 	"time"
 
-	e2eframework "agones.dev/agones/test/e2e/framework"
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	corev1 "k8s.io/api/core/v1"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	"k8s.io/apimachinery/pkg/labels"
 	"k8s.io/apimachinery/pkg/util/wait"
+
+	e2eframework "agones.dev/agones/test/e2e/framework"
 )
 
 // Test creating a gameserver when one of the extensions pods is down/deleted

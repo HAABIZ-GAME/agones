@@ -21,13 +21,14 @@ package v1
 import (
 	context "context"
 
-	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
-	applyconfigurationagonesv1 "agones.dev/agones/pkg/client/applyconfiguration/agones/v1"
-	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 	metav1 "k8s.io/apimachinery/pkg/apis/meta/v1"
 	types "k8s.io/apimachinery/pkg/types"
 	watch "k8s.io/apimachinery/pkg/watch"
 	gentype "k8s.io/client-go/gentype"
+
+	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
+	applyconfigurationagonesv1 "agones.dev/agones/pkg/client/applyconfiguration/agones/v1"
+	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
 )
 
 // GameServersGetter has a method to return a GameServerInterface.

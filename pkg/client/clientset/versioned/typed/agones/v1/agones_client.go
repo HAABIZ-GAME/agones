@@ -21,9 +21,10 @@ package v1
 import (
 	http "net/http"
 
+	rest "k8s.io/client-go/rest"
+
 	agonesv1 "agones.dev/agones/pkg/apis/agones/v1"
 	scheme "agones.dev/agones/pkg/client/clientset/versioned/scheme"
-	rest "k8s.io/client-go/rest"
 )
 
 type AgonesV1Interface interface {
