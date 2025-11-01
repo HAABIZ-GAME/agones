@@ -20,6 +20,8 @@ import (
 	"crypto/x509"
 	goErrors "errors"
 	"fmt"
+	"net"
+	"strconv"
 	"strings"
 	"time"
 
@@ -99,6 +101,7 @@ var remoteAllocationRetry = wait.Backoff{
 
 // Allocator handles game server allocation
 type Allocator struct {
+	nd                           net.Dialer
 	baseLogger                   *logrus.Entry
 	allocationPolicyLister       multiclusterlisterv1.GameServerAllocationPolicyLister
 	allocationPolicySynced       cache.InformerSynced
@@ -558,6 +561,16 @@ func (c *Allocator) ListenAndAllocate(ctx context.Context, updateWorkerCount int
 				req.response <- response{request: req, gs: nil, err: err}
 				continue
 			}
+
+			// Ping the GameServer to ensure it's still alive', if not we can't allocate to it
+			// in case port is not exposed, we will not be able to ping it
+			if len(gs.Status.Ports) > 0 {
+				if err := c.ping(ctx, gs); err != nil {
+					req.response <- response{request: req, gs: nil, err: err}
+					continue
+				}
+			}
+
 			// remove the game server that has been allocated
 			list = append(list[:index], list[index+1:]...)
 
@@ -724,6 +737,22 @@ func (c *Allocator) newMetrics(ctx context.Context) *metrics {
 		logger:           c.baseLogger,
 		start:            time.Now(),
 	}
+}
+
+// ping sends a network request to the GameServer's address to verify its availability and returns a result or nil on failure.
+func (c *Allocator) ping(ctx context.Context, gs *agonesv1.GameServer) interface{} {
+	if len(gs.Status.Ports) == 0 || len(gs.Spec.Ports) == 0 {
+		return nil
+	}
+	address := gs.Status.Address + ":" + strconv.Itoa(int(gs.Status.Ports[0].Port))
+	ctx, cancel := context.WithTimeout(ctx, 1*time.Second) // 1 second is enough
+	defer cancel()
+	conn, err := c.nd.DialContext(ctx, strings.ToLower(string(gs.Spec.Ports[0].Protocol)), address)
+	if err != nil {
+		return nil
+	}
+	defer conn.Close()
+	return nil
 }
 
 func addPort(ip string) string {
