@@ -753,7 +753,7 @@ func inTest() bool {
 }
 
 // ping sends a network request to the GameServer's address to verify its availability and returns a result or nil on failure.
-func (c *Allocator) ping(ctx context.Context, gs *agonesv1.GameServer) interface{} {
+func (c *Allocator) ping(ctx context.Context, gs *agonesv1.GameServer) error {
 	if inTest() {
 		return nil
 	}
